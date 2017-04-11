@@ -517,6 +517,8 @@ layer from scratch.
 In order to understand how `--fine_tune` works, please see the discussion on
 `Variables` in the TensorFlow-Slim [`README.md`](inception/slim/README.md).
 
+NOTE: One needs to edit the number of steps to save the checkpoints in `inception_train.py`.
+
 Putting this all together you can retrain a pre-trained Inception-v3 model on
 the flowers data set with the following command.
 
@@ -552,6 +554,8 @@ We have added a few extra options to the training procedure.
 *   The flowers data set is quite small so we shrink the size of the shuffling
     queue of examples. See [Adjusting Memory Demands](#adjusting-memory-demands)
     for more details.
+
+
 
 The training script will only reports the loss. To evaluate the quality of the
 fine-tuned model, you will need to run `flowers_eval`:
